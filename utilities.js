@@ -1,10 +1,6 @@
-function nodeApp (fileLocation) {
-    const fs = require("fs");
-    const fileName = [{name: "index.js", content: ""},
-                        {name: "assets"}, 
-                        {name: ".gitignore", content: "node_modules \n.env"}, 
-                        {name: "Readme.md", content: ""}];
-    console.log("test");
+const fs = require("fs");
+
+function generateFiles (fileName, fileLocation) {
     fileName.forEach(file => {
         const location = `${fileLocation}/${file.name}`;
         if (!fs.existsSync(location)) {
@@ -42,4 +38,4 @@ function nodeApp (fileLocation) {
     });
 }
 
-module.exports = {nodeApp};
+module.exports = {generateFiles};

@@ -1,11 +1,22 @@
 #! /usr/bin/env node
-const {nodeApp} = require("./project-types/nodeApp.js");
+const {nodeConsoleApp} = require("./project-types/node-console-app");
+const {nodeExpressApp} = require("./project-types/node-express-app");
 
 const location = process.cwd();
+const projectType = process.argv[2];
 
 console.log(location);
 
-nodeApp(location);
+const typesList = ["node-console-app", "node-express-app"];
+
+switch (projectType) {
+    case typesList[0]:
+        nodeConsoleApp(location);
+        break;
+    case typesList[1]:
+        nodeExpressApp(location);
+        break;
+}
 //check which command choosed
 //call files according to type
 
