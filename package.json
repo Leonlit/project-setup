@@ -1,0 +1,22 @@
+{
+  "name": "project-setup",
+  "version": "0.5.0",
+  "description": "A simple tool for generating project folders and files according to programmer's use case",
+  "main": "./cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "tools",
+    "automation"
+  ],
+  "author": "leonlit <leonlit123@gmail.com> (https://github.com/Leonlit)",
+  "license": "MIT",
+  "bin": {
+    "project-setup": "cli.js"
+  },
+  "dependencies": {
+    "link": "^0.1.5"
+  }
+}
