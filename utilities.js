@@ -38,4 +38,23 @@ function generateFiles (fileName, fileLocation) {
     });
 }
 
-module.exports = {generateFiles};
+const basicHtml = 
+`<!DOCTYPE html>
+<html lang='en'>
+    \t<head>
+        \t\t<meta charset='UTF-8'>
+        \t\t<meta name='description' content=''>
+        \t\t<meta name='keywords' content='HTMl, CSS, JS,'>
+        \t\t<meta name='author' content='Leon Lit'>
+        \t\t<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        \t\t<link rel='icon' type='image/png' href='.png'/>
+        \t\t<title></title>
+        \t\t<link rel='stylesheet' href='.css'>
+    \t</head>
+    \t<body>\t\t
+    \t</body>
+</html>\n
+<script src=''></script>
+`
+
+module.exports = {generateFiles, basicHtml};
