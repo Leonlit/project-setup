@@ -7,9 +7,9 @@ function generateFiles (fileName, fileLocation) {
             if (file["name"].indexOf(".") === -1) {
                 try {
                     fs.mkdirSync(location);
-                    //createdFolder(file)
+                    createdFolder(location)
                 }catch (err) {
-                    console.log(`Failed to create folder ${file.name}`);
+                    console.log(`Failed to create folder ${location}`);
                     console.error(err);
                 }
             }else {
@@ -26,9 +26,9 @@ function generateFiles (fileName, fileLocation) {
                             }
                         });
                     }
-                    //createdFile(file);
+                    createdFile(location);
                 }catch (err) {
-                    console.log(`Failed to create file ${file.name}`);
+                    console.log(`Failed to create file ${location}`);
                     console.error(err);
                 }
             }
@@ -38,23 +38,8 @@ function generateFiles (fileName, fileLocation) {
     });
 }
 
-const basicHtml = 
-`<!DOCTYPE html>
-<html lang='en'>
-    \t<head>
-        \t\t<meta charset='UTF-8'>
-        \t\t<meta name='description' content=''>
-        \t\t<meta name='keywords' content='HTMl, CSS, JS,'>
-        \t\t<meta name='author' content='Leon Lit'>
-        \t\t<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        \t\t<link rel='icon' type='image/png' href='.png'/>
-        \t\t<title></title>
-        \t\t<link rel='stylesheet' href='.css'>
-    \t</head>
-    \t<body>\t\t
-    \t</body>
-</html>\n
-<script src=''></script>
-`
+const createdFolder = (fileName) => console.log(`Created Folder ${fileName}`);
 
-module.exports = {generateFiles, basicHtml};
+const createdFile = (fileName) => console.log(`Created File ${fileName}`);
+
+module.exports = {generateFiles};
