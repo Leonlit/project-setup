@@ -3,13 +3,14 @@ const {nodeConsoleApp} = require("./project-types/node-console-app");
 const {nodeExpressApp} = require("./project-types/node-express-app");
 const {basicWebApp} = require("./project-types/basic-web-app");
 const {phpMysqlApp} = require("./project-types/php-mysql-app");
+const {herokuBasicPhp} = require("./project-types/heroku-basic-php");
 
 const location = process.cwd();
 const projectType = process.argv[2];
 
 console.log(location);
 
-const typesList = ["node-console-app", "node-express-app", "basic-web-app", "php-basic-app", "php-mysql-app"];
+const typesList = ["node-console-app", "node-express-app", "basic-web-app", "php-basic-app", "php-mysql-app", "heroku-basic-php"];
 
 switch (projectType) {
     case typesList[0]:
@@ -26,6 +27,9 @@ switch (projectType) {
         break;
     case typesList[4]:
         phpMysqlApp(location);
+        break;
+    case typesList[5]:
+        herokuBasicPhp(location);
         break;
     default:
         console.log("To generate files and folders for specific type of project, please provide one of the types of the projects provided below:\n");

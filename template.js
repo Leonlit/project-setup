@@ -34,12 +34,12 @@ const basicWebAppFiles= [
     {name: "scripts/main.js", content: "'use strict'\n"},
 ]
 
-function getBasicWebAppFiles (path="") {
+function getBasicWebAppFiles (path="", indexType= ".html") {
     return [
         {name: "README.md", content: ""},
         {name: `${path}assets`},
-        {name: `${path}index.html`, content: basicHtml},
-        {name: ".htaccess", content: ""},
+        {name: `${path}index${indexType}`, content: (indexType === ".html") ? basicHtml : basicPhp},
+        {name: `${path}.htaccess`, content: ""},
         {name: `${path}css`},
         {name: `${path}css/mobile.css`, content: ""},
         {name: `${path}css/tablet.css`, content: ""},

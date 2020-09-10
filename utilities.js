@@ -4,7 +4,7 @@ function generateFiles (fileName, fileLocation) {
     fileName.forEach(file => {
         const location = `${fileLocation}/${file.name}`;
         if (!fs.existsSync(location)) {
-            if (file["name"].indexOf(".") === -1) {
+            if (file["name"].indexOf(".") === -1 && file.exception == undefined) {
                 try {
                     fs.mkdirSync(location);
                     createdFolder(location)
