@@ -3,8 +3,7 @@ const template = require("../template");
 
 function basicWebApp (fileLocation) {
     const fileName = [...template.getBasicWebAppFiles(),
-                        {name: ".gitignore", content: "secret"}, 
-                        {name: "README.md", content: ""}];
+                        {name: ".gitignore", content: "secret"}];
 
     utility.generateFiles(fileName, fileLocation);
 }

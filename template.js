@@ -36,6 +36,7 @@ const basicWebAppFiles= [
 
 function getBasicWebAppFiles (path="") {
     return [
+        {name: "README.md", content: ""},
         {name: `${path}assets`},
         {name: `${path}index.html`, content: basicHtml},
         {name: ".htaccess", content: ""},

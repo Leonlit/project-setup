@@ -18,8 +18,7 @@ function nodeExpressApp (fileLocation) {
     const fileName = [{name: "server.js", content: basicExpressServer},
                         {name: "public"},
                         ...template.getBasicWebAppFiles("public/"),
-                        {name: ".gitignore", content: "node_modules \n.env"}, 
-                        {name: "README.md", content: ""}];
+                        {name: ".gitignore", content: "node_modules \n.env"}];
 
     utility.generateFiles(fileName, fileLocation);
 }
