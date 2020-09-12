@@ -14,11 +14,11 @@ Now, you can start using the command to generate folders and files for specific 
 ## Types of project
 
 
-                Name                  |         Command          
-     -------------------------------- | ------------------------ 
-        Basic web application         |      basic-web-app       
-      Basic heroku application        |     heroku-basic-php     
-        Basic Php application         |      php-basic-app       
-      Php and MySQL application       |      php-mysql-app       
-     NodeJS basic console application |     node-console-app    
-     NodeJS basic Express application |     node-express-app     
+    |            Name                  |         Command          |
+    | :------------------------------: | :----------------------: |
+    |    Basic web application         |      basic-web-app       |
+    |  Basic heroku application        |     heroku-basic-php     |
+    |    Basic Php application         |      php-basic-app       |
+    |  Php and MySQL application       |      php-mysql-app       |
+    | NodeJS basic console application |     node-console-app     |
+    | NodeJS basic Express application |     node-express-app     |
